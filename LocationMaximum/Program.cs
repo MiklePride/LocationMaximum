@@ -18,14 +18,14 @@
         
         if (arrayOfIntegers[indexFirstElementArrayOfInteger] > arrayOfIntegers[indexFirstElementArrayOfInteger + 1])
         {
-            Console.WriteLine($"Первый элемент массива является локальным максимумом и его число - {arrayOfIntegers[indexFirstElementArrayOfInteger]}");
+            Console.WriteLine($"\nПервый элемент массива является локальным максимумом и его число - {arrayOfIntegers[indexFirstElementArrayOfInteger]}");
         }
 
-        if (arrayOfIntegers[arrayOfIntegerSize] > arrayOfIntegers[arrayOfIntegerSize - 1])
+        if (arrayOfIntegers[arrayOfIntegers.Length - 1] > arrayOfIntegers[arrayOfIntegers.Length - 2])
         {
-            Console.WriteLine($"Последний элемент массива является локальным максимумом и его число - {arrayOfIntegers[arrayOfIntegerSize]}");
+            Console.WriteLine($"\nПоследний элемент массива является локальным максимумом и его число - {arrayOfIntegers[arrayOfIntegers.Length - 1]} ");
         }
-        Console.Write("\n\nЛокальные максимумы целочисленноного массива:");
+        Console.Write("\nЛокальные максимумы целочисленноного массива:");
 
         for (indexArrayOfIntegers = 1; indexArrayOfIntegers < arrayOfIntegers.Length - 1; indexArrayOfIntegers++)
         {
