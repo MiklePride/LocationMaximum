@@ -15,25 +15,25 @@
             arrayOfIntegers[indexArrayOfIntegers] = random.Next(minimumRandomNumber, maximumRandomNumber);
             Console.Write(arrayOfIntegers[indexArrayOfIntegers] + " ");
         }
-        
+        Console.Write("\nЛокальные максимумы целочисленноного массива:");
+
         if (arrayOfIntegers[indexFirstElementArrayOfInteger] > arrayOfIntegers[indexFirstElementArrayOfInteger + 1])
         {
-            Console.WriteLine($"\nПервый элемент массива является локальным максимумом и его число - {arrayOfIntegers[indexFirstElementArrayOfInteger]}");
+            Console.Write(arrayOfIntegers[indexFirstElementArrayOfInteger] + " ");
         }
-
-        if (arrayOfIntegers[arrayOfIntegers.Length - 1] > arrayOfIntegers[arrayOfIntegers.Length - 2])
-        {
-            Console.WriteLine($"\nПоследний элемент массива является локальным максимумом и его число - {arrayOfIntegers[arrayOfIntegers.Length - 1]} ");
-        }
-        Console.Write("\nЛокальные максимумы целочисленноного массива:");
 
         for (indexArrayOfIntegers = 1; indexArrayOfIntegers < arrayOfIntegers.Length - 1; indexArrayOfIntegers++)
         {
             if (arrayOfIntegers[indexArrayOfIntegers] > arrayOfIntegers[indexArrayOfIntegers + 1] && arrayOfIntegers[indexArrayOfIntegers] > arrayOfIntegers[indexArrayOfIntegers - 1])
             {
                 Console.Write(arrayOfIntegers[indexArrayOfIntegers] + " ");
-                indexArrayOfIntegers += 2;
+                indexArrayOfIntegers ++;
             }
         }
+
+        if (arrayOfIntegers[arrayOfIntegers.Length - 1] > arrayOfIntegers[arrayOfIntegers.Length - 2])
+        {
+            Console.Write(arrayOfIntegers[arrayOfIntegers.Length - 1] + " ");
+        } 
     }
 }
